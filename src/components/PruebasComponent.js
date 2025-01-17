@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { AvisoComponente } from './AvisoComponente';
 
 export const PruebasComponent = () => {
 
@@ -31,10 +32,11 @@ export const PruebasComponent = () => {
         <h1>El Efecto - Hook UseEffect</h1>
         <strong className='label label-green'>{usuario}</strong>
         <strong>{fecha}</strong>
-        <form>
+        <p>
             <input type='text' onChange={modUsuario} placeholder='Cambia el nombre'/>
             <button onClick={modFecha}>CAMBIAR FECHA</button>
-        </form>
+        </p >    
+        { usuario == "CARMEN" && <AvisoComponente/> }
     </div>
   )
 }
